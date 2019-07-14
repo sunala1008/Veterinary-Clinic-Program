@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Veterinary_Clinic.Winform.Controls.EmployeeControl">
+    <Position X="22" Y="11.5" Width="3" />
+    <NestedTypes>
+      <Class Name="Veterinary_Clinic.Winform.Controls.EmployeeControl.RegistButtonClickedEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\EmployeeControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAAiAAABgAAACAjAAKAaCAMAEAAGgIAAgCAQo=</HashCode>
+      <FileName>Controls\EmployeeControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Controls.PatientControl">
+    <Position X="8.25" Y="11.5" Width="3.5" />
+    <NestedTypes>
+      <Class Name="Veterinary_Clinic.Winform.Controls.PatientControl.BtnSearch_ClickedEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\PatientControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Veterinary_Clinic.Winform.Controls.PatientControl.BtnTreatmentRegist_ClickedEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\PatientControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAkICAAAACIQABgAACCgTAgaAaAIAQEYYDYIAAgACAI=</HashCode>
+      <FileName>Controls\PatientControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Controls.TreatmentControl">
+    <Position X="14.75" Y="11.5" Width="4" />
+    <NestedTypes>
+      <Class Name="Veterinary_Clinic.Winform.Controls.TreatmentControl.LbTreatmentWaitingList_DoubleClickedEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\TreatmentControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Veterinary_Clinic.Winform.Controls.TreatmentControl.BtnNext_ClickedEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\TreatmentControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CCASiAAgAicICFgABuCAAAACUSAAAAAAIKAIuDACDAA=</HashCode>
+      <FileName>Controls\TreatmentControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Forms.EmployeeInfoForm">
+    <Position X="19" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>UAEEAIAoACCABBAAAAKAABAaCAARAAAAAAAAEAAAAAQ=</HashCode>
+      <FileName>Forms\EmployeeInfoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Forms.PatientInfoForm">
+    <Position X="5.25" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>UIEEQIAAACCQIBAAAAKAABArAgABAEAAAIAAEAAACAQ=</HashCode>
+      <FileName>Forms\PatientInfoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Forms.TreatmentRegistForm">
+    <Position X="12" Y="11.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAkQAAADABABkAAACAAAACAIAAAAIAAAAAEEAAIEQ=</HashCode>
+      <FileName>Forms\TreatmentRegistForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.MainForm">
+    <Position X="0.75" Y="11.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>GQCQAASAACAwCAEGAQiQEABCEiCABARAAACACAAMACQ=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Program">
+    <Position X="19" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Properties.Resources">
+    <Position X="19" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEABACAAAQAgAgAQAABEwAACQAAQEQAQABAAAEAAIg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Winform.Properties.Settings">
+    <Position X="19" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.BreedsData">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.CompanionData">
+    <Position X="2.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.DB">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.DiseaseData">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.DrugData">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.EmployeeData">
+    <Position X="4.75" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.EntityData&lt;T&gt;">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.Extension">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.OperationData">
+    <Position X="4.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.PatientData">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.PrescriptionData">
+    <Position X="2.5" Y="6" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Data.SpeciesData">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Patient">
+    <Position X="16.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.VETEntities">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Breeds">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Companion">
+    <Position X="12.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Disease">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Drug">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Employee">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.I_O_Hospital">
+    <Position X="12.75" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Operation">
+    <Position X="14.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Prescription">
+    <Position X="14.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.PrescriptionDrug">
+    <Position X="16.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Species">
+    <Position X="9.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Helpers.DataDeliver">
+    <Position X="12.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Veterinary_Clinic.Library.Helpers.FormHelper">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>

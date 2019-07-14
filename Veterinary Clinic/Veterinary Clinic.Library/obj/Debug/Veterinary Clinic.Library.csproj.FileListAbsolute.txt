@@ -1,0 +1,12 @@
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\Veterinary Clinic.Library.dll.config
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\Veterinary Clinic.Library.dll
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\Veterinary Clinic.Library.pdb
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\EntityFramework.dll
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\EntityFramework.xml
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\obj\Debug\Veterinary Clinic.Library.csprojAssemblyReference.cache
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\obj\Debug\Veterinary Clinic.Library.csproj.CoreCompileInputs.cache
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\obj\Debug\Veterinary Clinic.Library.csproj.CopyComplete
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\obj\Debug\Veterinary Clinic.Library.dll
+C:\Users\301-02\source\repos\Veterinary Clinic\Veterinary Clinic.Library\obj\Debug\Veterinary Clinic.Library.pdb
