@@ -1,4 +1,6 @@
-﻿namespace Veterinary_Clinic.Winform
+﻿using System.Data.Entity;
+
+namespace Veterinary_Clinic.Winform
 {
     partial class MainForm
     {

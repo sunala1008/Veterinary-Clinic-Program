@@ -10,7 +10,7 @@ namespace Veterinary_Clinic.Library.Helpers
             return MessageBox.Show("삭제하시겠습니까?", "질문", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes;
         }
 
-        public static void MoveToCenter(this Form form) // 확장 메서드
+        public static void MoveToCenter(this Form form)
         {
             form.StartPosition = FormStartPosition.Manual;
             form.Location = new Point(

@@ -70,7 +70,7 @@ namespace Veterinary_Clinic.Winform.Forms
             }
             else
             {
-                MessageBox.Show("중복");
+                MessageBox.Show("이미 등록된 환자입니다.");
             }
             Close();
         }

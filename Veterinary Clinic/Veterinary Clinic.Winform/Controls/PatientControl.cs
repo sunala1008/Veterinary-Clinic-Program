@@ -35,7 +35,7 @@ namespace Veterinary_Clinic.Winform.Controls
         private static void ShowPatientInfoForm(Patient patient)
         {
             Form form = new PatientInfoForm(patient);
-            form.MoveToCenter();
+            FormHelper.MoveToCenter(form);
             form.ShowDialog();
         }
         #endregion
@@ -153,7 +153,7 @@ namespace Veterinary_Clinic.Winform.Controls
         private void BtnRegist_Click(object sender, EventArgs e)
         {
             Form form = new PatientInfoForm();
-            form.MoveToCenter();
+            FormHelper.MoveToCenter(form);
             form.ShowDialog();
         }
 

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VETModelStoreContainer" CdmEntityContainer="VETEntities">
+    <EntitySetMapping Name="Breeds">
+      <EntityTypeMapping TypeName="VETModel.Breeds">
+        <MappingFragment StoreEntitySet="Breeds">
+          <ScalarProperty Name="BreedsID" ColumnName="BreedsID" />
+          <ScalarProperty Name="SpeciesID" ColumnName="SpeciesID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companion">
+      <EntityTypeMapping TypeName="VETModel.Companion">
+        <MappingFragment StoreEntitySet="Companion">
+          <ScalarProperty Name="CompanionID" ColumnName="CompanionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disease">
+      <EntityTypeMapping TypeName="VETModel.Disease">
+        <MappingFragment StoreEntitySet="Disease">
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drug">
+      <EntityTypeMapping TypeName="VETModel.Drug">
+        <MappingFragment StoreEntitySet="Drug">
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UnitQuantity" ColumnName="UnitQuantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="VETModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FireDate" ColumnName="FireDate" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Birth" ColumnName="Birth" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="I_O_Hospital">
+      <EntityTypeMapping TypeName="VETModel.I_O_Hospital">
+        <MappingFragment StoreEntitySet="I/O_Hospital">
+          <ScalarProperty Name="I_O_Hospital_ID" ColumnName="I/O Hospital ID" />
+          <ScalarProperty Name="OperationCheck" ColumnName="OperationCheck" />
+          <ScalarProperty Name="Fee" ColumnName="Fee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operation">
+      <EntityTypeMapping TypeName="VETModel.Operation">
+        <MappingFragment StoreEntitySet="Operation">
+          <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HospitalizationCheck" ColumnName="HospitalizationCheck" />
+          <ScalarProperty Name="Fee" ColumnName="Fee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patient">
+      <EntityTypeMapping TypeName="VETModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanionID" ColumnName="CompanionID" />
+          <ScalarProperty Name="IsFeMale" ColumnName="IsFeMale" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="BreedsID" ColumnName="BreedsID" />
+          <ScalarProperty Name="Birth" ColumnName="Birth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescription">
+      <EntityTypeMapping TypeName="VETModel.Prescription">
+        <MappingFragment StoreEntitySet="Prescription">
+          <ScalarProperty Name="PrescriptionID" ColumnName="PrescriptionID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="Inscription" ColumnName="Inscription" />
+          <ScalarProperty Name="I_O_Hospital_ID" ColumnName="I/O Hospital ID" />
+          <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+          <ScalarProperty Name="PrescriptionDrugID" ColumnName="PrescriptionDrugID" />
+          <ScalarProperty Name="InHospital" ColumnName="InHospital" />
+          <ScalarProperty Name="OutHospital" ColumnName="OutHospital" />
+          <ScalarProperty Name="I_O_Fee" ColumnName="I/O Fee" />
+          <ScalarProperty Name="Operation_Fee" ColumnName="Operation Fee" />
+          <ScalarProperty Name="Drug_Fee" ColumnName="Drug Fee" />
+          <ScalarProperty Name="Total_Fee" ColumnName="Total Fee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrescriptionDrug">
+      <EntityTypeMapping TypeName="VETModel.PrescriptionDrug">
+        <MappingFragment StoreEntitySet="PrescriptionDrug">
+          <ScalarProperty Name="PrescriptionDrugID" ColumnName="PrescriptionDrugID" />
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Species">
+      <EntityTypeMapping TypeName="VETModel.Species">
+        <MappingFragment StoreEntitySet="Species">
+          <ScalarProperty Name="SpeciesID" ColumnName="SpeciesID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Assistance" TypeName="VETModel.Assistance" StoreEntitySet="Assistance">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="EmployeeID" ColumnName="DoctorID" />
+      </EndProperty>
+      <EndProperty Name="Employee1">
+        <ScalarProperty Name="EmployeeID" ColumnName="NurseID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

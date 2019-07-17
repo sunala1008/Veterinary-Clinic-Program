@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VETModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Assistance">
+    <Key>
+      <PropertyRef Name="NurseID" />
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="NurseID" Type="int" Nullable="false" />
+    <Property Name="DoctorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Breeds">
+    <Key>
+      <PropertyRef Name="BreedsID" />
+    </Key>
+    <Property Name="BreedsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SpeciesID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Companion">
+    <Key>
+      <PropertyRef Name="CompanionID" />
+    </Key>
+    <Property Name="CompanionID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Disease">
+    <Key>
+      <PropertyRef Name="DiseaseID" />
+    </Key>
+    <Property Name="DiseaseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Drug">
+    <Key>
+      <PropertyRef Name="DrugID" />
+    </Key>
+    <Property Name="DrugID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UnitQuantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FireDate" Type="date" />
+    <Property Name="HireDate" Type="date" Nullable="false" />
+    <Property Name="PhoneNum" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birth" Type="date" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="I/O_Hospital">
+    <Key>
+      <PropertyRef Name="I/O Hospital ID" />
+    </Key>
+    <Property Name="I/O Hospital ID" Type="int" Nullable="false" />
+    <Property Name="OperationCheck" Type="bit" Nullable="false" />
+    <Property Name="Fee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Operation">
+    <Key>
+      <PropertyRef Name="OperationID" />
+    </Key>
+    <Property Name="OperationID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HospitalizationCheck" Type="bit" Nullable="false" />
+    <Property Name="Fee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CompanionID" Type="int" Nullable="false" />
+    <Property Name="IsFeMale" Type="bit" />
+    <Property Name="Weight" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="BreedsID" Type="int" Nullable="false" />
+    <Property Name="Birth" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prescription">
+    <Key>
+      <PropertyRef Name="PrescriptionID" />
+    </Key>
+    <Property Name="PrescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="DiseaseID" Type="int" Nullable="false" />
+    <Property Name="Inscription" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="I/O Hospital ID" Type="int" />
+    <Property Name="OperationID" Type="int" />
+    <Property Name="PrescriptionDrugID" Type="int" />
+    <Property Name="InHospital" Type="date" />
+    <Property Name="OutHospital" Type="date" />
+    <Property Name="I/O Fee" Type="int" Nullable="false" />
+    <Property Name="Operation Fee" Type="int" Nullable="false" />
+    <Property Name="Drug Fee" Type="int" Nullable="false" />
+    <Property Name="Total Fee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrescriptionDrug">
+    <Key>
+      <PropertyRef Name="PrescriptionDrugID" />
+    </Key>
+    <Property Name="PrescriptionDrugID" Type="int" Nullable="false" />
+    <Property Name="DrugID" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Species">
+    <Key>
+      <PropertyRef Name="SpeciesID" />
+    </Key>
+    <Property Name="SpeciesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Assistance_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Assistance" Type="Self.Assistance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Assistance">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assistance_Employee1">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Assistance" Type="Self.Assistance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Assistance">
+        <PropertyRef Name="NurseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Breeds_Species">
+    <End Role="Species" Type="Self.Species" Multiplicity="1" />
+    <End Role="Breeds" Type="Self.Breeds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Species">
+        <PropertyRef Name="SpeciesID" />
+      </Principal>
+      <Dependent Role="Breeds">
+        <PropertyRef Name="SpeciesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Breeds">
+    <End Role="Breeds" Type="Self.Breeds" Multiplicity="1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Breeds">
+        <PropertyRef Name="BreedsID" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="BreedsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Companion1">
+    <End Role="Companion" Type="Self.Companion" Multiplicity="1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companion">
+        <PropertyRef Name="CompanionID" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="CompanionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_Disease">
+    <End Role="Disease" Type="Self.Disease" Multiplicity="1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disease">
+        <PropertyRef Name="DiseaseID" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="DiseaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_I/O_Hospital">
+    <End Role="I/O_Hospital" Type="Self.I/O_Hospital" Multiplicity="0..1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="I/O_Hospital">
+        <PropertyRef Name="I/O Hospital ID" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="I/O Hospital ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_Operatoin">
+    <End Role="Operation" Type="Self.Operation" Multiplicity="0..1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operation">
+        <PropertyRef Name="OperationID" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="OperationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_Patient">
+    <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_PrescriptionDrug1">
+    <End Role="PrescriptionDrug" Type="Self.PrescriptionDrug" Multiplicity="0..1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrescriptionDrug">
+        <PropertyRef Name="PrescriptionDrugID" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="PrescriptionDrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrescriptionDrug_Drug">
+    <End Role="Drug" Type="Self.Drug" Multiplicity="1" />
+    <End Role="PrescriptionDrug" Type="Self.PrescriptionDrug" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drug">
+        <PropertyRef Name="DrugID" />
+      </Principal>
+      <Dependent Role="PrescriptionDrug">
+        <PropertyRef Name="DrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VETModelStoreContainer">
+    <EntitySet Name="Assistance" EntityType="Self.Assistance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Breeds" EntityType="Self.Breeds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companion" EntityType="Self.Companion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Disease" EntityType="Self.Disease" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Drug" EntityType="Self.Drug" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="I/O_Hospital" EntityType="Self.I/O_Hospital" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operation" EntityType="Self.Operation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prescription" EntityType="Self.Prescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrescriptionDrug" EntityType="Self.PrescriptionDrug" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Species" EntityType="Self.Species" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Assistance_Employee" Association="Self.FK_Assistance_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Assistance" EntitySet="Assistance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assistance_Employee1" Association="Self.FK_Assistance_Employee1">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Assistance" EntitySet="Assistance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Breeds_Species" Association="Self.FK_Breeds_Species">
+      <End Role="Species" EntitySet="Species" />
+      <End Role="Breeds" EntitySet="Breeds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Breeds" Association="Self.FK_Patient_Breeds">
+      <End Role="Breeds" EntitySet="Breeds" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Companion1" Association="Self.FK_Patient_Companion1">
+      <End Role="Companion" EntitySet="Companion" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Employee" Association="Self.FK_Patient_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_Disease" Association="Self.FK_Prescription_Disease">
+      <End Role="Disease" EntitySet="Disease" />
+      <End Role="Prescription" EntitySet="Prescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_I/O_Hospital" Association="Self.FK_Prescription_I/O_Hospital">
+      <End Role="I/O_Hospital" EntitySet="I/O_Hospital" />
+      <End Role="Prescription" EntitySet="Prescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_Operatoin" Association="Self.FK_Prescription_Operatoin">
+      <End Role="Operation" EntitySet="Operation" />
+      <End Role="Prescription" EntitySet="Prescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_Patient" Association="Self.FK_Prescription_Patient">
+      <End Role="Patient" EntitySet="Patient" />
+      <End Role="Prescription" EntitySet="Prescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_PrescriptionDrug1" Association="Self.FK_Prescription_PrescriptionDrug1">
+      <End Role="PrescriptionDrug" EntitySet="PrescriptionDrug" />
+      <End Role="Prescription" EntitySet="Prescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrescriptionDrug_Drug" Association="Self.FK_PrescriptionDrug_Drug">
+      <End Role="Drug" EntitySet="Drug" />
+      <End Role="PrescriptionDrug" EntitySet="PrescriptionDrug" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

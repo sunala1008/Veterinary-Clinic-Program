@@ -58,11 +58,17 @@ namespace Veterinary_Clinic.Winform.Forms
             Employee.PhoneNum = txbPhoneNum.Text;
             Employee.Birth = dtpBirth.Value;
             Employee.HireDate = dtpHireDate.Value;
-            if (Employee.FireDate != null)
+            if (cbxFireDate.Checked == true)
             {
-                cbxFireDate.Checked = true;
+                
                 Employee.FireDate = dtpFireDate.Value;
             }
+
+            //if (Employee.FireDate != null)
+            //{
+            //    cbxFireDate.Checked = true;
+            //    Employee.FireDate = dtpFireDate.Value;
+            //}
         }
         #endregion
 

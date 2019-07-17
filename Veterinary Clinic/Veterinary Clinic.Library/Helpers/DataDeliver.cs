@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Veterinary_Clinic.Library.Helpers
 {
-    public class DataDeliver  // 이게 Model이래
+    public class DataDeliver
     {
         public int Number { get; set; }
         public string PetName { get; set; }

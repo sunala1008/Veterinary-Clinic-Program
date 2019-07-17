@@ -10,6 +10,8 @@ namespace Veterinary_Clinic.Winform.Forms
     {
         public Patient Patient { get; set; }
         public Companion Companion { get; set; }
+
+
         public PatientInfoForm()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace Veterinary_Clinic.Winform.Forms
             btnDone.Enabled = true;
             btnDone.Visible = true;
         }
-
+        // ↑ 등록, 수정 버튼 swap ↓
         public PatientInfoForm(Patient patient)
         {
             InitializeComponent();
@@ -102,8 +104,7 @@ namespace Veterinary_Clinic.Winform.Forms
             if (Patient.Name != null)
                 ReadFromEntity();
         }
-
-        private void CbbSpeciesId_SelectedValueChanged(object sender, EventArgs e)
+                private void CbbSpeciesId_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cbbSpeciesId.SelectedValue == null)
                 return;

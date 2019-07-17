@@ -24,10 +24,12 @@ namespace Veterinary_Clinic.Winform
         }
 
         #region Main Method
-        private void ShowWaitingListCount()
+        // 대기자 목록의 인원 수
+        private void ShowWaitingListCount() 
         {
             lblMainCount.Text = $"현재 대기자 : 총 {lbMainWaitingList.Items.Count}명";
         }
+
         public TreatmentControl TreatmentControl
         {
             get
@@ -45,10 +47,14 @@ namespace Veterinary_Clinic.Winform
             treatmentControl.LoadDrug();
             treatmentControl.LoadOperation();
         }
+
+        // 프로그램 종료 버튼
         private void BtnOFF_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        // 탭버튼과 아이콘 버튼 연동
         private void TsbPatient_Click(object sender, EventArgs e)
         {
             tabCtrl.SelectedTab = tabPatient;
@@ -61,11 +67,15 @@ namespace Veterinary_Clinic.Winform
         {
             tabCtrl.SelectedTab = tabEmployee;
         }
+
+        // 대기자 삭제
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             lbMainWaitingList.Items.Remove(lbMainWaitingList.SelectedItem);
             ShowWaitingListCount();
         }
+
+        // 대기자 호출
         private void BtnBuzzer_Click(object sender, EventArgs e)
         {
             if (lbMainWaitingList.Items.Count == 0)
@@ -78,6 +88,7 @@ namespace Veterinary_Clinic.Winform
             string[] splits = call.Split('\t');
 
             MessageBox.Show($"{splits[0]}의 차례입니다.");
+            tabCtrl.SelectedTab = tabTreatment;
         }
         #endregion
 
@@ -94,7 +105,7 @@ namespace Veterinary_Clinic.Winform
                 return;
             
             Form form = new TreatmentRegistForm(patient);
-            form.MoveToCenter();
+            FormHelper.MoveToCenter(form);
             form.Owner = this;
             form.ShowDialog();
             ShowWaitingListCount();

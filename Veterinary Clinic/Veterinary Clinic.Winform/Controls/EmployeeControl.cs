@@ -37,6 +37,7 @@ namespace Veterinary_Clinic.Winform.Controls
         #endregion
 
         #region Event
+        // 직원 검색
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             string name = txbEmployeeName.Text;
@@ -87,29 +88,33 @@ namespace Veterinary_Clinic.Winform.Controls
         }
         #endregion
 
+        // 직원 등록
         private void BtnRegist_Click(object sender, EventArgs e)
         {
             Form form = new EmployeeInfoForm();
-            form.MoveToCenter();
+            FormHelper.MoveToCenter(form);
             form.ShowDialog();
         }
+
+        // 더블클릭 시 수정
         private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!(dgvList.CurrentRow.DataBoundItem is Employee employee))
                 return;
 
             Form form = new EmployeeInfoForm(employee);
-            form.MoveToCenter();
+            FormHelper.MoveToCenter(form);
             form.ShowDialog();
         }
+
         private void DgvList_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Insert)
+            if (e.KeyCode == Keys.Insert) // Insert키 => 등록
             {
                 Employee employee = new Employee();
                 ShowEmployeeInfoForm(employee);
             }
-            else if (e.KeyCode == Keys.Delete)
+            else if (e.KeyCode == Keys.Delete) // Delete키 => 삭제
             {
                 if (!(CurrnetRowDataBoundItem is Employee employee))
                     return;

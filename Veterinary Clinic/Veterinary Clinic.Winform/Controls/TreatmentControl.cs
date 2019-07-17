@@ -127,6 +127,9 @@ namespace Veterinary_Clinic.Winform.Controls
             else
                 return;
 
+            if (lbTreatmentWaitingList.Items.Count == 0)
+                MessageBox.Show("대기 환자가 없습니다.");
+
             var patient = DB.Patient.SearchFromTreatementControl(lbTreatmentWaitingList.SelectedItem.ToString());
 
             ShowPatientInfo(patient);
