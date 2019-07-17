@@ -22,12 +22,18 @@
 - Microsoft .NET Framework : 4.7.03062
 - 언어 : C# Winform
 
+# 구동 영상
+- https://www.youtube.com/watch?v=S0GNZvGyVGI&feature=youtu.be
+
 # 기대 효과
 - 본 프로그램을 통하여 환자와 직원 정보의 CRUD를 보다 쉽게 관리할 수 있다.
 - 환자 정보를 클릭하여 진료 차트로 정보를 넘겨 빠른 진료가 가능하다.
 
 # 개선사항
+- 메인 폼의 대기자 명단과 진료 탭의 대기자 명단이 같은 대기자들을 보이도록 한다.
+- 진료 탭에서 선택한 환자 정보를 제대로 출력 할 수 있게 한다.
+- 환자 탭에서 환자 정보를 더블클릭 하여서 볼 때, 품종 항목을 처음 등록한 정보를 출력 하도록 한다.
 - DB의 데이터를 활용한 기능들을 추가하도록 한다.
+- 기타 찾지 못한 오류들을 수정할 수 있도록 한다.
 
-# 구동 영상
-- https://www.youtube.com/watch?v=S0GNZvGyVGI&feature=youtu.be
+
