@@ -24,6 +24,7 @@
 
 # ERD
 ![ERD 1](https://user-images.githubusercontent.com/50562490/61343585-439f2580-a889-11e9-8641-76a1be2307ef.png)
+![ERD 2](https://user-images.githubusercontent.com/50562490/61343640-6b8e8900-a889-11e9-9b3d-fb6b7233582f.png)
 
 # 구동 영상
 - https://www.youtube.com/watch?v=S0GNZvGyVGI&feature=youtu.be
