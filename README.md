@@ -22,6 +22,9 @@
 - Microsoft .NET Framework : 4.7.03062
 - 언어 : C# Winform
 
+# ERD
+![ERD 1](https://user-images.githubusercontent.com/50562490/61343585-439f2580-a889-11e9-8641-76a1be2307ef.png)
+
 # 구동 영상
 - https://www.youtube.com/watch?v=S0GNZvGyVGI&feature=youtu.be
 
